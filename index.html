@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your property for sale through Anchor Submission Portal. Fast, free listing with professional review by our team.">
+  <title>Sell Your Property Faster | Anchor Submission Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav__logo" aria-label="Anchor Submission Portal — Home">
+        <span class="nav__logo-mark" aria-hidden="true">
+          <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none">
+            <defs>
+              <linearGradient id="anchorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d4a853"/>
+                <stop offset="100%" stop-color="#c49a3c"/>
+              </linearGradient>
+            </defs>
+            <circle cx="16" cy="6" r="2.75" stroke="url(#anchorGrad)" stroke-width="1.75" fill="none"/>
+            <path d="M16 8.5v14.5" stroke="url(#anchorGrad)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 14h12" stroke="url(#anchorGrad)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M11.5 22.5c0 0 2.5 3.5 4.5 3.5s4.5-3.5 4.5-3.5" stroke="url(#anchorGrad)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M9 18.5c-2 2.5-2.5 5.5-1 7.5 2 2.5 5.5 2 8-0.5" stroke="url(#anchorGrad)" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M23 18.5c2 2.5 2.5 5.5 1 7.5-2 2.5-5.5 2-8-0.5" stroke="url(#anchorGrad)" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-anchor">Anchor</span>
+          <span class="nav__logo-portal">Submission Portal</span>
+        </span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#submit-form">Submit Property</a></li>
+        <li><a href="#submit-form" class="btn btn--sm btn--primary">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">Trusted by Property Owners</span>
+          <h1 id="hero-heading" class="hero__title">Sell Your Property Faster</h1>
+          <p class="hero__subtitle">Submit your property details in just a few minutes and our team will review your listing.</p>
+          <div class="hero__actions">
+            <a href="#submit-form" class="btn btn--primary btn--lg">Submit Property</a>
+            <a href="#why-us" class="btn btn--outline btn--lg">Learn More</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <strong>500+</strong>
+              <span>Properties Listed</span>
+            </div>
+            <div class="hero__stat">
+              <strong>48hrs</strong>
+              <span>Average Review</span>
+            </div>
+            <div class="hero__stat">
+              <strong>Free</strong>
+              <span>No Listing Fees</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__illustration">
+            <svg viewBox="0 0 480 400" class="hero__svg" role="img" aria-label="Modern property illustration">
+              <defs>
+                <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#e8eef7"/>
+                  <stop offset="100%" style="stop-color:#f8fafc"/>
+                </linearGradient>
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#d4a853"/>
+                  <stop offset="100%" style="stop-color:#c49a3c"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="400" fill="url(#skyGrad)" rx="16"/>
+              <!-- Sun -->
+              <circle cx="400" cy="60" r="35" fill="#f0d78c" opacity="0.8"/>
+              <!-- Hills -->
+              <ellipse cx="240" cy="380" rx="280" ry="60" fill="#c8d6e8" opacity="0.5"/>
+              <!-- Main house -->
+              <rect x="140" y="180" width="200" height="160" fill="#1a2d4a" rx="4"/>
+              <polygon points="130,185 240,100 350,185" fill="#0f1f35"/>
+              <rect x="200" y="260" width="50" height="80" fill="#d4a853" rx="2"/>
+              <rect x="160" y="210" width="45" height="40" fill="#7eb8e8" rx="2" opacity="0.7"/>
+              <rect x="275" y="210" width="45" height="40" fill="#7eb8e8" rx="2" opacity="0.7"/>
+              <rect x="220" y="200" width="40" height="35" fill="#7eb8e8" rx="2" opacity="0.7"/>
+              <!-- Side building -->
+              <rect x="60" y="240" width="80" height="100" fill="#2a4060" rx="3"/>
+              <rect x="75" y="260" width="20" height="25" fill="#7eb8e8" rx="1" opacity="0.6"/>
+              <rect x="105" y="260" width="20" height="25" fill="#7eb8e8" rx="1" opacity="0.6"/>
+              <!-- Trees -->
+              <rect x="370" y="280" width="12" height="60" fill="#5a4a3a"/>
+              <circle cx="376" cy="260" r="35" fill="#3d7a5c"/>
+              <rect x="30" y="300" width="10" height="40" fill="#5a4a3a"/>
+              <circle cx="35" cy="285" r="28" fill="#4a8a6a"/>
+              <!-- Path -->
+              <ellipse cx="240" cy="355" rx="60" ry="12" fill="#d4a853" opacity="0.3"/>
+              <!-- For sale sign -->
+              <rect x="380" y="300" width="8" height="50" fill="#8b7355"/>
+              <rect x="360" y="295" width="70" height="35" fill="url(#goldGrad)" rx="4"/>
+              <text x="395" y="318" text-anchor="middle" fill="#1a2d4a" font-size="11" font-weight="bold" font-family="sans-serif">FOR SALE</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features" id="why-us" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="features-heading" class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">We make selling your property simple, fast, and stress-free.</p>
+        </div>
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Free Property Listing</h3>
+            <p class="feature-card__text">List your property at no cost. No hidden fees, no commissions on submission.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Quick Property Review</h3>
+            <p class="feature-card__text">Our team reviews your submission within 48 hours and contacts you promptly.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Reach Serious Buyers</h3>
+            <p class="feature-card__text">Connect with qualified buyers actively searching for properties like yours.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Submission Form -->
+    <section class="form-section" id="submit-form" aria-labelledby="form-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="form-heading" class="section-title">Submit Your Property</h2>
+          <p class="section-subtitle">Fill in the details below. All fields marked with <span class="required-mark">*</span> are required.</p>
+        </div>
+
+        <form id="propertyForm" class="property-form" novalidate>
+
+          <!-- Seller Information -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Seller Information
+            </legend>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="sellerName">Full Name <span class="required-mark">*</span></label>
+                <input type="text" id="sellerName" name="sellerName" required maxlength="100" autocomplete="name" placeholder="John Doe">
+                <span class="form-field__error" id="sellerNameError"></span>
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone Number <span class="required-mark">*</span></label>
+                <input type="tel" id="phone" name="phone" required maxlength="20" autocomplete="tel" placeholder="+1 (310) 555-0100">
+                <span class="form-field__error" id="phoneError"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" maxlength="100" autocomplete="email" placeholder="john@example.com">
+                <span class="form-field__error" id="emailError"></span>
+              </div>
+              <div class="form-field">
+                <label for="contactMethod">Preferred Contact Method</label>
+                <select id="contactMethod" name="contactMethod">
+                  <option value="Phone">Phone</option>
+                  <option value="Email">Email</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="Any">Any</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Property Information -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Property Information
+            </legend>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="propertyTitle">Property Title <span class="required-mark">*</span></label>
+                <input type="text" id="propertyTitle" name="propertyTitle" required maxlength="150" placeholder="e.g. Modern 4-Bedroom Home in Beverly Hills">
+                <span class="form-field__error" id="propertyTitleError"></span>
+              </div>
+              <div class="form-field">
+                <label for="propertyType">Property Type <span class="required-mark">*</span></label>
+                <select id="propertyType" name="propertyType" required>
+                  <option value="">Select type...</option>
+                  <option value="House">House</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Townhouse">Townhouse</option>
+                  <option value="Land">Land</option>
+                  <option value="Commercial Property">Commercial Property</option>
+                  <option value="Warehouse">Warehouse</option>
+                  <option value="Office">Office</option>
+                </select>
+                <span class="form-field__error" id="propertyTypeError"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Location -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Location
+            </legend>
+            <div class="form-row form-row--3">
+              <div class="form-field">
+                <label for="county">County <span class="required-mark">*</span></label>
+                <input type="text" id="county" name="county" required maxlength="80" placeholder="Orange County">
+                <span class="form-field__error" id="countyError"></span>
+              </div>
+              <div class="form-field">
+                <label for="city">City <span class="required-mark">*</span></label>
+                <input type="text" id="city" name="city" required maxlength="80" placeholder="Los Angeles">
+                <span class="form-field__error" id="cityError"></span>
+              </div>
+              <div class="form-field">
+                <label for="estate">Neighborhood</label>
+                <input type="text" id="estate" name="estate" maxlength="80" placeholder="Beverly Hills">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="address">Street Address <span class="required-mark">*</span></label>
+                <input type="text" id="address" name="address" required maxlength="200" placeholder="1234 Sunset Blvd, Apt 5">
+                <span class="form-field__error" id="addressError"></span>
+              </div>
+              <div class="form-field">
+                <label for="mapsLink">Google Maps Link <span class="form-field__optional">(Optional)</span></label>
+                <input type="url" id="mapsLink" name="mapsLink" maxlength="500" placeholder="https://maps.google.com/...">
+                <span class="form-field__error" id="mapsLinkError"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Property Details -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              Property Details
+            </legend>
+            <div class="form-row form-row--4">
+              <div class="form-field">
+                <label for="bedrooms">Bedrooms</label>
+                <input type="number" id="bedrooms" name="bedrooms" min="0" max="50" placeholder="0">
+              </div>
+              <div class="form-field">
+                <label for="bathrooms">Bathrooms</label>
+                <input type="number" id="bathrooms" name="bathrooms" min="0" max="50" placeholder="0">
+              </div>
+              <div class="form-field">
+                <label for="parking">Parking Spaces</label>
+                <input type="number" id="parking" name="parking" min="0" max="50" placeholder="0">
+              </div>
+              <div class="form-field">
+                <label for="yearBuilt">Year Built</label>
+                <input type="number" id="yearBuilt" name="yearBuilt" min="1800" max="2030" placeholder="2020">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="propertySize">Property Size</label>
+                <input type="number" id="propertySize" name="propertySize" min="0" step="0.01" placeholder="0">
+              </div>
+              <div class="form-field">
+                <label for="sizeUnit">Size Unit</label>
+                <select id="sizeUnit" name="sizeUnit">
+                  <option value="Square Feet">Square Feet</option>
+                  <option value="Square Metres">Square Metres</option>
+                  <option value="Acres">Acres</option>
+                  <option value="Hectares">Hectares</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="askingPrice">Asking Price</label>
+                <input type="number" id="askingPrice" name="askingPrice" min="0" step="1" placeholder="0">
+              </div>
+              <div class="form-field">
+                <label for="currency">Currency</label>
+                <select id="currency" name="currency">
+                  <option value="USD">USD</option>
+                  <option value="KES">KES</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Property Description -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Property Description
+            </legend>
+            <div class="form-field">
+              <label for="description">Describe your property</label>
+              <textarea id="description" name="description" rows="6" maxlength="5000" placeholder="Describe the property features, condition, neighborhood, and any other relevant details..."></textarea>
+              <div class="char-counter"><span id="charCount">0</span> / 5000</div>
+            </div>
+          </fieldset>
+
+          <!-- Amenities -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              Amenities
+            </legend>
+            <div class="amenities-grid" id="amenitiesGrid">
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Parking"> Parking</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Garden"> Garden</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Swimming Pool"> Swimming Pool</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Security"> Security</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="CCTV"> CCTV</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Electric Fence"> Electric Fence</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Borehole"> Borehole</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Water"> Water</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Electricity"> Electricity</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Internet"> Internet</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Balcony"> Balcony</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Gym"> Gym</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Lift"> Lift</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Backup Generator"> Backup Generator</label>
+              <label class="checkbox-label"><input type="checkbox" name="amenities" value="Air Conditioning"> Air Conditioning</label>
+            </div>
+          </fieldset>
+
+          <!-- Media Upload: Images -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              Property Images
+            </legend>
+            <p class="upload-hint">Upload up to 20 images (JPG, JPEG, PNG, WEBP). Max 10MB each. Drag to reorder.</p>
+            <div class="dropzone" id="imageDropzone" role="button" tabindex="0" aria-label="Upload images">
+              <input type="file" id="imageInput" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple hidden>
+              <div class="dropzone__content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <p>Drag &amp; drop images here or <span class="dropzone__link">browse files</span></p>
+                <span class="dropzone__count"><span id="imageCount">0</span> / 20 images</span>
+              </div>
+            </div>
+            <div class="media-preview" id="imagePreview" aria-live="polite"></div>
+          </fieldset>
+
+          <!-- Media Upload: Videos -->
+          <fieldset class="form-group">
+            <legend class="form-group__legend">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+              Property Videos
+            </legend>
+            <p class="upload-hint">Upload up to 3 videos (MP4, MOV, WEBM). Max 500MB each before compression.</p>
+            <div class="dropzone dropzone--video" id="videoDropzone" role="button" tabindex="0" aria-label="Upload videos">
+              <input type="file" id="videoInput" accept=".mp4,.mov,.webm,video/mp4,video/quicktime,video/webm" multiple hidden>
+              <div class="dropzone__content">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                <p>Drag &amp; drop videos here or <span class="dropzone__link">browse files</span></p>
+                <span class="dropzone__count"><span id="videoCount">0</span> / 3 videos</span>
+              </div>
+            </div>
+            <div class="media-preview media-preview--video" id="videoPreview" aria-live="polite"></div>
+          </fieldset>
+
+          <!-- Privacy Notice -->
+          <div class="privacy-notice">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p>By submitting this form, you consent to us securely storing your information and media for the purpose of reviewing and processing your property listing.</p>
+          </div>
+
+          <!-- Progress Overlay -->
+          <div class="progress-overlay" id="progressOverlay" hidden aria-live="polite" aria-busy="true">
+            <div class="progress-card">
+              <h3 class="progress-card__title" id="progressTitle">Processing...</h3>
+              <div class="progress-bar">
+                <div class="progress-bar__fill" id="progressFill" style="width: 0%"></div>
+              </div>
+              <p class="progress-card__status" id="progressStatus">Preparing submission...</p>
+              <p class="progress-card__eta" id="progressEta"></p>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary btn--lg btn--submit" id="submitBtn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Submit Property
+            </button>
+          </div>
+
+          <!-- Success Message -->
+          <div class="success-message" id="successMessage" hidden role="alert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Property Submitted Successfully!</h3>
+            <p id="successText">Thank you. Our team will review your listing and contact you shortly.</p>
+            <button type="button" class="btn btn--outline" id="submitAnother">Submit Another Property</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="6" r="2.75" stroke="currentColor" stroke-width="1.75" fill="none"/>
+            <path d="M16 8.5v14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 14h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M11.5 22.5c0 0 2.5 3.5 4.5 3.5s4.5-3.5 4.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M9 18.5c-2 2.5-2.5 5.5-1 7.5 2 2.5 5.5 2 8-0.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path d="M23 18.5c2 2.5 2.5 5.5 1 7.5-2 2.5-5.5 2-8-0.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </span>
+        <span>Anchor Submission Portal</span>
+      </div>
+      <p class="footer__copy">&copy; 2026 Anchor Submission Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Video compression fallback modal -->
+  <div class="modal" id="videoFallbackModal" hidden role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__content">
+      <h3 id="modalTitle">Video Compression Unavailable</h3>
+      <p id="modalMessage">Your device or browser cannot compress videos. The original video file will be uploaded, which may take longer. Do you want to continue?</p>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--outline" id="modalCancel">Cancel</button>
+        <button type="button" class="btn btn--primary" id="modalConfirm">Continue Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

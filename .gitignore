@@ -1,0 +1,12 @@
+# Google Apps Script backend — contains private Sheet & Drive IDs
+# Keep these in Google Apps Script only, not in public repos
+appsscript.gs
+appsscript.json
+
+# Optional: local config overrides
+config.local.js
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
