@@ -847,15 +847,15 @@ fieldset {
 
 /* --- Progress Overlay --- */
 .progress-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
+  background: rgba(15, 31, 53, 0.45);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-xl);
-  z-index: 10;
+  z-index: 150;
+  padding: 1.25rem;
 }
 
 .progress-overlay[hidden] {
@@ -864,9 +864,13 @@ fieldset {
 
 .progress-card {
   text-align: center;
-  padding: 2rem;
-  max-width: 400px;
+  padding: 2rem 2rem 1.75rem;
+  max-width: 380px;
   width: 100%;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
 }
 
 .progress-card__title {
