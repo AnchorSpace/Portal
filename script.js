@@ -54,6 +54,7 @@ const DOM = {
   successMessage: document.getElementById('successMessage'),
   successText: document.getElementById('successText'),
   submitAnother: document.getElementById('submitAnother'),
+  doneBtn: document.getElementById('doneBtn'),
   imageDropzone: document.getElementById('imageDropzone'),
   imageInput: document.getElementById('imageInput'),
   imagePreview: document.getElementById('imagePreview'),
@@ -1040,8 +1041,8 @@ async function handleSubmit(e) {
   }
 }
 
-/** Reset form for another submission */
-function resetForm() {
+/** Clear success state and reset form for a fresh start */
+function clearSubmissionState() {
   state.images.forEach(img => URL.revokeObjectURL(img.previewUrl));
   state.images = [];
   state.videos = [];
@@ -1056,7 +1057,18 @@ function resetForm() {
   renderVideoPreviews();
   updateImageCount();
   updateVideoCount();
+}
+
+/** Reset form and scroll to submission section */
+function resetForm() {
+  clearSubmissionState();
   document.getElementById('submit-form').scrollIntoView({ behavior: 'smooth' });
+}
+
+/** Return to top of page after successful submission */
+function goHome() {
+  clearSubmissionState();
+  document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
 }
 
 /* ==========================================================================
@@ -1092,8 +1104,9 @@ function init() {
   // Form submit
   DOM.form.addEventListener('submit', handleSubmit);
 
-  // Submit another
+  // Submit another or return home
   DOM.submitAnother.addEventListener('click', resetForm);
+  DOM.doneBtn.addEventListener('click', goHome);
 
   // Video fallback modal
   DOM.modalCancel.addEventListener('click', () => closeVideoFallbackModal(false));
