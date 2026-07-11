@@ -799,37 +799,18 @@ function validateForm() {
 
 /** Collect form data into a structured object */
 function collectFormData() {
-  const propertyType = document.getElementById('propertyType').value;
-  const city = sanitizeText(document.getElementById('city').value);
-  const sellerName = sanitizeText(document.getElementById('sellerName').value);
-
-  // Auto-generate title for backend folder naming (field removed from form)
-  const propertyTitle = propertyType && city
-    ? propertyType + ' - ' + city
-    : propertyType || city || sellerName || 'Property Submission';
-
   return {
-    sellerName: sellerName,
+    sellerName: sanitizeText(document.getElementById('sellerName').value),
     phone: sanitizeText(document.getElementById('phone').value),
     email: sanitizeText(document.getElementById('email').value),
     contactMethod: document.getElementById('contactMethod').value,
-    propertyTitle: propertyTitle,
-    propertyType: propertyType,
+    propertyType: document.getElementById('propertyType').value,
     county: sanitizeText(document.getElementById('county').value),
-    city: city,
+    city: sanitizeText(document.getElementById('city').value),
     estate: sanitizeText(document.getElementById('estate').value),
     address: sanitizeText(document.getElementById('address').value),
     mapsLink: sanitizeText(document.getElementById('mapsLink').value),
-    bedrooms: '',
-    bathrooms: '',
-    parking: '',
-    propertySize: '',
-    sizeUnit: '',
-    askingPrice: '',
-    currency: '',
-    yearBuilt: '',
-    description: sanitizeText(document.getElementById('description').value),
-    amenities: ''
+    description: sanitizeText(document.getElementById('description').value)
   };
 }
 
