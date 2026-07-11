@@ -7,7 +7,7 @@
    Configuration — Replace WEB_APP_URL with your deployed Google Apps Script URL
    ========================================================================== */
 const CONFIG = {
-  WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbzJsBvCWQRUiA7ESjH8mHwo7B9TRljDPJhH3KHSSqnU80Q3-1PTUIhqABiRshsYnjCbUg/exec',
+  WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbwqH56iq1wTf4gPzhFQeVSvERdx2drmqh3iqepnGhZntetUNLwUfkviWqzaWcyU8bhS/exec',
 
   MAX_IMAGES: 20,
   MAX_VIDEOS: 3,
@@ -771,7 +771,6 @@ function validateForm() {
     { id: 'sellerName', errorId: 'sellerNameError', validate: (v) => v.length >= 2 || 'Name must be at least 2 characters' },
     { id: 'phone', errorId: 'phoneError', validate: (v) => /^[\d\s+\-()]{7,20}$/.test(v) || 'Enter a valid phone number' },
     { id: 'email', errorId: 'emailError', validate: (v) => isValidEmail(v) || 'Enter a valid email address' },
-    { id: 'propertyTitle', errorId: 'propertyTitleError', validate: (v) => v.length >= 3 || 'Property title is required' },
     { id: 'propertyType', errorId: 'propertyTypeError', validate: (v) => v !== '' || 'Select a property type' },
     { id: 'county', errorId: 'countyError', validate: (v) => v.length >= 2 || 'County is required' },
     { id: 'city', errorId: 'cityError', validate: (v) => v.length >= 2 || 'City is required' },
@@ -800,31 +799,37 @@ function validateForm() {
 
 /** Collect form data into a structured object */
 function collectFormData() {
-  const amenities = Array.from(document.querySelectorAll('input[name="amenities"]:checked'))
-    .map(cb => cb.value);
+  const propertyType = document.getElementById('propertyType').value;
+  const city = sanitizeText(document.getElementById('city').value);
+  const sellerName = sanitizeText(document.getElementById('sellerName').value);
+
+  // Auto-generate title for backend folder naming (field removed from form)
+  const propertyTitle = propertyType && city
+    ? propertyType + ' - ' + city
+    : propertyType || city || sellerName || 'Property Submission';
 
   return {
-    sellerName: sanitizeText(document.getElementById('sellerName').value),
+    sellerName: sellerName,
     phone: sanitizeText(document.getElementById('phone').value),
     email: sanitizeText(document.getElementById('email').value),
     contactMethod: document.getElementById('contactMethod').value,
-    propertyTitle: sanitizeText(document.getElementById('propertyTitle').value),
-    propertyType: document.getElementById('propertyType').value,
+    propertyTitle: propertyTitle,
+    propertyType: propertyType,
     county: sanitizeText(document.getElementById('county').value),
-    city: sanitizeText(document.getElementById('city').value),
+    city: city,
     estate: sanitizeText(document.getElementById('estate').value),
     address: sanitizeText(document.getElementById('address').value),
     mapsLink: sanitizeText(document.getElementById('mapsLink').value),
-    bedrooms: document.getElementById('bedrooms').value || '',
-    bathrooms: document.getElementById('bathrooms').value || '',
-    parking: document.getElementById('parking').value || '',
-    propertySize: document.getElementById('propertySize').value || '',
-    sizeUnit: document.getElementById('sizeUnit').value,
-    askingPrice: document.getElementById('askingPrice').value || '',
-    currency: document.getElementById('currency').value,
-    yearBuilt: document.getElementById('yearBuilt').value || '',
+    bedrooms: '',
+    bathrooms: '',
+    parking: '',
+    propertySize: '',
+    sizeUnit: '',
+    askingPrice: '',
+    currency: '',
+    yearBuilt: '',
     description: sanitizeText(document.getElementById('description').value),
-    amenities: amenities.join(', ')
+    amenities: ''
   };
 }
 
