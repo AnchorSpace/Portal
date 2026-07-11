@@ -205,14 +205,17 @@ fieldset {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.nav__logo:hover .nav__logo-mark {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-gold);
+.nav__logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
 }
 
-.nav__logo-icon {
-  width: 26px;
-  height: 26px;
+.nav__logo:hover .nav__logo-img {
+  opacity: 0.92;
 }
 
 .nav__logo-text {
@@ -1009,6 +1012,14 @@ fieldset {
   color: var(--color-white);
   font-weight: 700;
   font-size: 0.9375rem;
+}
+
+.footer__logo-img {
+  height: 36px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
 }
 
 .footer__logo-mark {
