@@ -7,7 +7,7 @@
    Configuration — Replace WEB_APP_URL with your deployed Google Apps Script URL
    ========================================================================== */
 const CONFIG = {
-  WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbwqH56iq1wTf4gPzhFQeVSvERdx2drmqh3iqepnGhZntetUNLwUfkviWqzaWcyU8bhS/exec',
+  WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbxStI0u7tpPcNQ_LwKuegGtLZOI8R4SzQUjEXTzNVggP5f5HYSFL2XgZc0oxTWBIz_nBg/exec',
 
   MAX_IMAGES: 20,
   MAX_VIDEOS: 3,
